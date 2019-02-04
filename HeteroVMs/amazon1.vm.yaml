@@ -1,0 +1,18 @@
+mips: 4
+cores: 1
+memory: 7.5
+name: medium
+cacheSize: 40000000
+
+billing:
+    unitTime: 1.0
+    unitPrice: 2
+
+provisioningDelay:
+    distribution: constant
+    value: 45.0
+
+deprovisioningDelay:
+    distribution: constant
+    value: 0.0
+

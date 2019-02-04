@@ -1,0 +1,18 @@
+mips: 2
+cores: 1
+memory: 3.75
+name: small
+cacheSize: 20000000
+
+billing:
+    unitTime: 1.0
+    unitPrice: 1
+
+provisioningDelay:
+    distribution: constant
+    value: 45.0
+
+deprovisioningDelay:
+    distribution: constant
+    value: 0.0
+

@@ -1,0 +1,50 @@
+# (required) Input dir
+input-dir: workload
+
+# (required) Output file
+output-file: "test"
+
+# (required) Distribution
+# distribution: constant
+
+# (required) Storage manager
+storage-manager: global
+
+# Random number generator seed, defaults  to current time in milis
+seed:
+
+# Storage cache, defaults to unlimited
+storage-cache: fifo
+
+# Whether to enable logging, defaults to true
+enable-logging:
+
+# Whether the algorithms should be storage aware, defaults to true
+storage-aware:
+
+vm-directory: HeteroVMs
+
+#Optional VM type settings, if specified, overrides content of vm type yaml file
+vm-mips:
+vm-cores:
+vm-billing-price:
+vm-billing-unit:
+vm-provisioning-distribution:
+vm-deprovisioning-distribution:
+vm-provisioning-value:
+vm-deprovisioning-value:
+
+runtime-variance: "0.2"
+failure-rate: "0.0"
+
+average-performance-variation: "0.10"
+max-performance-variation: "0.20"
+stddev-performance-variation: "0.10"
+
+global-storage:
+global-storage-directory:
+gs-read-speed:
+gs-write-speed:
+gs-latency:
+gs-chunk-time:
+gs-replicas: "1000"
