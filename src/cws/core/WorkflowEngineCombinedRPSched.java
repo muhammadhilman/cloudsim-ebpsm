@@ -21,7 +21,7 @@ import cws.core.jobs.JobListener;
  * 
  * @author Gideon Juve <juve@usc.edu>
  */
-public class WorkflowEngineCombinedRPSchedNoContainer extends CWSSimEntity implements WorkflowEngine{
+public class WorkflowEngineCombinedRPSched extends CWSSimEntity implements WorkflowEngine{
     public static int next_id = 0;
 
     /** The list of current {@link DAGJob}s. */
@@ -55,7 +55,7 @@ public class WorkflowEngineCombinedRPSchedNoContainer extends CWSSimEntity imple
     
     private boolean provisioningRequestSend = false;
 
-    public WorkflowEngineCombinedRPSchedNoContainer(CombinedDynamicAlgorithm algorithm, double budget, double deadline,
+    public WorkflowEngineCombinedRPSched(CombinedDynamicAlgorithm algorithm, double budget, double deadline,
             CloudSimWrapper cloudsim) {
         super("WorkflowEngine" + (next_id++), cloudsim);
         this.algorithm = algorithm;
