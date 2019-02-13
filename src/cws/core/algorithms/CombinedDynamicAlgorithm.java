@@ -5,7 +5,7 @@ import java.util.List;
 import cws.core.Cloud;
 import cws.core.EnsembleManager;
 import cws.core.VM;
-import cws.core.WorkflowEngineCombinedRPSchedNoContainer;
+import cws.core.WorkflowEngineCombinedRPSched;
 import cws.core.cloudsim.CloudSimWrapper;
 import cws.core.dag.DAG;
 import cws.core.dag.DAGJob;
@@ -49,7 +49,7 @@ public abstract class CombinedDynamicAlgorithm extends Algorithm {
         setCloud(new Cloud(getCloudsim()));
         provisioner.setCloud(getCloud());
         
-        setWorkflowEngine(new WorkflowEngineCombinedRPSchedNoContainer(this, getBudget(), getDeadline(), getCloudsim()));
+        setWorkflowEngine(new WorkflowEngineCombinedRPSched(this, getBudget(), getDeadline(), getCloudsim()));
 
         //The ensemble manager submits the dags to the wf engine for execution
         setEnsembleManager(new EnsembleManager(getAllDags(), getWorkflowEngine(), getCloudsim()));
